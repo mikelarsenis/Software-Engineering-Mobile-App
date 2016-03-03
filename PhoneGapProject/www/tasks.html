@@ -8,6 +8,7 @@
 		<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, width=device-width, height=device-height" />
         <link rel="stylesheet" type="text/css" href="css/tasks.css" />
 		<script src="js/tasks.js"></script>
+    <script src="js/jquery-1.12.1.min.js"></script>
     <title>Tasks</title>
     
   </head>
@@ -15,35 +16,17 @@
   <input type="hidden" id="userID">
   <div id="tasksBanner">Honey-Do List</div>
   <div id="container">
-  <?php
-    $servername = "localhost";
-    $username = "W01238826";
-    $password = "Jacobcs!";
-    $dbname = "W01238826";
+  
+  <script>
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    if($conn->connect_error)
+  $(document).ready(function()
+  {
+    $.get("php/popTasks.php", function(data,status)
     {
-      die("<p>Connection failed: " . $conn->connect_error . "</p>");
-    }
-
-    //$sql = "SELECT TaskText FROM Tasks WHERE UserID =" + $userID;
-    $sql = "SELECT * FROM Tasks";
-    $result = $conn->query($sql);
-
-    if($result->num_rows > 0)
-    {
-      while($row = $result->fetch_assoc())
-      {
-        echo "<input type='checkbox' id='task".$row["TaskID"]."'><label>".$row["TaskText"]."</label><br>";
-      }
-    }
-    else
-    {
-      echo "No current tasks...";
-    }
-  ?>
+      document.getElementById("container").innerHTML = data;
+    })
+  });
+  </script>
 
   </div>
   <div id="test"></div>
