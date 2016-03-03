@@ -1,0 +1,32 @@
+
+body 
+{
+ padding-top:2%;
+ text-align:center;
+ //background-color:blue;
+ height:100%;
+ font-size:4em;
+}
+#container
+{
+ border:solid black 1px;
+ text-align:center;
+ height:100%;
+}
+input
+{
+ font-size:1em;
+ width:200px;
+}
+#submitBtn
+{
+  position:absolute;
+  bottom:0;
+  left:0;
+  margin:0px;
+  padding-bottom:.5em;
+  width:100%;
+  border-top:solid black 3px;
+  color:white;
+  background:cyan;
+}

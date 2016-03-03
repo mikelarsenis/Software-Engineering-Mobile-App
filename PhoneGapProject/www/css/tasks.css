@@ -1,0 +1,54 @@
+
+
+body 
+{
+ text-align:center;
+ height:100%;
+ font-size:2em;
+}
+#deleteTask
+{
+ background-color:red;
+ color:black;
+ width:50%;
+ position:fixed;
+ bottom:0;
+ right:0;
+ padding:5px;
+}
+#newTask
+{
+ background-color:blue;
+ color:white;
+ width:50%;
+ position:fixed;
+ bottom:0;
+ left:0;
+ padding:5px;
+}
+#container
+{
+ border:solid black 2px;
+ padding-top:3%;
+ padding-bottom:5%;
+}
+#tasksBanner
+{
+ background-color:orange;
+ width:100%;
+
+ padding-top:5px;
+ padding-bottom:5px;
+ //position: absolute;
+ //left:0;
+ //top:0;
+}
+input[type="checkbox"] 
+{
+  transform:scale(1.5, 1.5);
+}
+#trashIcon
+{
+	height:30px;
+	width:auto;
+}
