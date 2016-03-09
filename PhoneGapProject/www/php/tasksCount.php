@@ -12,16 +12,18 @@
     }
 
     //$sql = "SELECT TaskText FROM Tasks WHERE UserID =" + $userID;
-    
     $sql = "SELECT * FROM Tasks";
     $result = $conn->query($sql);
+
+    $count = 0;
 
     if($result->num_rows > 0)
     {
       while($row = $result->fetch_assoc())
       {
-        echo "<input type='checkbox' name='checkboxes' id='task".$row["TaskID"]."' value='".$row["TaskText"]."'><label> ".$row["TaskText"]."</label><hr>";
+        $count = $count+1;
       }
+      echo $count;
     }
     else
     {
