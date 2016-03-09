@@ -11,14 +11,12 @@
 
 	if($conn->connect_error)
 	{
-		  die("<p>Connection failed: " . $conn->connect_error . "</p>");
+		die("<p>Connection failed: " . $conn->connect_error . "</p>");
 	}
-
 
 	//$sql = "DELETE FROM Tasks WHERE TaskText LIKE \"" . checkedBoxes[i].value . "%\";";
     $sql = "DELETE FROM Tasks WHERE TaskText LIKE \"" . $data . "%\";";
     
-
 	if($conn->query($sql)===TRUE)
 	{
 		echo 'alert("task deleted successfully")';
