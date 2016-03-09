@@ -50,7 +50,7 @@ function deleteCheckedBoxes(chkboxName) //deletes all checked boxes
   {
 	  for(var i=0; i<checkboxesChecked.length;i++)
 	  {
-	 	 removeTask(checkboxes[i].value);
+	 	 removeTask(checkboxesChecked[i].value);
 	  }
   }
   else
@@ -60,6 +60,7 @@ function deleteCheckedBoxes(chkboxName) //deletes all checked boxes
   }
 
   location.reload();
+  return;
 } 
 
 function removeTask(val) //deletes row matching value from database
