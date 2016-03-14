@@ -2,7 +2,7 @@
 function newTask()
 {
 	//alert("Hit function to add new task");
-	window.location.assign("addTask.php");
+	window.location.assign("addTask.html");
 }
 
 function checkedBoxes(chkboxName) //checks for checked boxes
@@ -69,4 +69,25 @@ function removeTask(val) //deletes row matching value from database
     {
     	dataSent: val
     });   
+}
+
+function checkBox(img) //changes the image of the checkbox
+{
+  var id = img.id;
+  var element = id+"checkbox";
+  var checked = document.getElementById(element).checked;
+  var images = document.querySelector("input[id*='"+id+"']"); 
+
+  if(checked == false)
+  {
+    document.getElementById(img.id).src = "img/checkedBox.png";
+    document.getElementById(element).checked = true;
+    //document.getElementById('check2').checked = true;
+  }
+  else
+  {
+    document.getElementById(img.id).src = "img/emptyBox.png";
+    document.getElementById(element).checked = false;
+    //document.getElementById('check2').checked = false;
+  }
 }
