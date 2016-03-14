@@ -27,4 +27,3 @@ function cancel()
 		window.location.assign("tasks.php");
 	}
 }
-	
