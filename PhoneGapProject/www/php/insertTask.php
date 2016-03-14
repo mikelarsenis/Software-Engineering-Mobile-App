@@ -20,6 +20,14 @@
 
 	//insertion query
 	$sql = "INSERT INTO Tasks (UserID, TaskText) VALUES ('1', $task)";
-	mysqli_query($conn,$sql);
+
+	if($conn->query($sql)===TRUE)
+	{
+		echo 'alert("Task inserted correctly!")';
+	}
+	else
+	{
+		echo 'alert("Error inserting task: ' . $conn->error . '")';
+	}
 
 ?>
