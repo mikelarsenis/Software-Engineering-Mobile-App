@@ -1,13 +1,12 @@
 <?php
-
+	
+	$task = $_POST['dataSent'];
+	echo 'alert("PING")';
 	//datebase info
 	$servername = "localhost";
 	$username = "W01238826";
 	$password = "Jacobcs!";
 	$dbname = "W01238826";
-
-	//last game data to insert into database
-	$task = $_POST['dataSent'];
 
 	//connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
