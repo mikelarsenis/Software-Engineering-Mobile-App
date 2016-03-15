@@ -10,9 +10,7 @@ function addTask()
 
 	if(confirm("Added task: " + task.substring(0,13) +"... \n\nAdd another task?")==false)
 	{
-		$.post("http://icarus.cs.weber.edu/~jd38826/CS3750/Software-Engineering-Mobile-App/PhoneGapProject/www/php/insertTask.php",
-	    {
-	    	dataSent:task
+		$.ajax({url: "http://icarus.cs.weber.edu/~jd38826/CS3750/Software-Engineering-Mobile-App/PhoneGapProject/www/php/insertTask.php?dataSent=" + task
 	    }); 
 		document.getElementById("taskInput").value="";
 		window.location.assign("tasks.html");
@@ -21,7 +19,7 @@ function addTask()
 	{
 		$.post("http://icarus.cs.weber.edu/~jd38826/CS3750/Software-Engineering-Mobile-App/PhoneGapProject/www/php/insertTask.php",
 	    {
-	    	dataSent:task
+	    	dataSent: task
 	    }); 
 		document.getElementById("taskInput").value="";
 	}
