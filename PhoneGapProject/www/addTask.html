@@ -12,17 +12,21 @@
     <title>Add New Task</title>
   </head>
   <body>
+    <input type="hidden" id="userID">
+    
     <div id="newTaskBanner"><strong>Add New Task</strong></div>
-  <div id="container">
-    <label>Add Task:</label><br>
-    <textarea id="taskInput"  rows="4" cols="25" ></textarea>
-  </div>
-  
-  <div id="addTask" onclick="addTask()">
-     <img src="img/addTask.png" id="plusIcon" style="width:1.5em;height:1.5em;" >
-  </div>
-  <div id="cancel" onclick="cancel()">
-     <img src="img/cancel.png" id="xIcon" style="width:1.5em;height:1.5em;" >
-  </div>
+    
+    <div id="container">
+      <label>Add Task:</label><br>
+      <textarea id="taskInput"  rows="4" cols="25" ></textarea>
+    </div>
+    
+    <div id="addTask" onclick="addTask()">
+       <img src="img/addTask.png" id="plusIcon" style="width:1.5em;height:1.5em;" >
+    </div>
+    
+    <div id="cancel" onclick="cancel()">
+       <img src="img/cancel.png" id="xIcon" style="width:1.5em;height:1.5em;" >
+    </div>
   </body>
 </html>

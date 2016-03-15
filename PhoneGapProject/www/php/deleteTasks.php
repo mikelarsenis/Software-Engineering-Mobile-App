@@ -1,6 +1,7 @@
 <?php
     //get posted data
     $data = $_POST['dataSent'];
+    echo 'alert("we posted!")';
 
     $servername = "localhost";
 	$username = "W01238826";

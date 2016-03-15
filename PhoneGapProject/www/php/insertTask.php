@@ -1,28 +1,33 @@
 <?php
-    //get posted data
-    $data = $_POST['dataSent'];
-
-    $servername = "localhost";
+	
+	$task = $_POST['dataSent'];
+	echo "alert('PING')";
+	//datebase info
+	$servername = "localhost";
 	$username = "W01238826";
 	$password = "Jacobcs!";
 	$dbname = "W01238826";
 
+	//connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
 
+	//check connection
 	if($conn->connect_error)
 	{
 		die("<p>Connection failed: " . $conn->connect_error . "</p>");
 	}
 
-	//$sql = "DELETE FROM Tasks WHERE TaskText LIKE \"" . checkedBoxes[i].value . "%\";";
-    $sql = "INSERT INTO Tasks(UserID, TaskText) VALUES ('8', " . $data . ");";
-    
+	//insertion query
+	$sql = "INSERT INTO Tasks (UserID, TaskText) VALUES ('8','" . $task . "')";
+	//$sql = "INSERT INTO Tasks (UserID, TaskText) VALUES ('8','This is a test')";
+
 	if($conn->query($sql)===TRUE)
 	{
-		echo 'alert("task deleted successfully")';
+		echo 'alert("Task inserted correctly!")';
 	}
 	else
 	{
-		echo 'alert("Error deleting record: ' . $conn->error . '")';
+		echo 'alert("Error inserting task: ' . $conn->error . '")';
 	}
+
 ?>

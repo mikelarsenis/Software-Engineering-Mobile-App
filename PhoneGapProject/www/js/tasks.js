@@ -55,17 +55,19 @@ function deleteCheckedBoxes(chkboxName) //deletes all checked boxes
   }
   else
   {
-  	location.reload();
+  	//location.reload();
+    window.location.assign("tasks.html");
   	return;
   }
 
-  location.reload();
+  //location.reload();
+  window.location.assign("tasks.html");
   return;
 } 
 
 function removeTask(val) //deletes row matching value from database
 {
-    $.post("php/deleteTasks.php",
+    $.post("http://icarus.cs.weber.edu/~ml18995/SoftwareEngineering/Assignment3/php/deleteTasks.php",
     {
     	dataSent: val
     });   
@@ -74,7 +76,7 @@ function removeTask(val) //deletes row matching value from database
 function checkBox(img) //changes the image of the checkbox
 {
   var id = img.id;
-  var element = id+"checkbox";
+  var element = "task"+id+"checkbox";
   var checked = document.getElementById(element).checked;
   var images = document.querySelector("input[id*='"+id+"']"); 
 

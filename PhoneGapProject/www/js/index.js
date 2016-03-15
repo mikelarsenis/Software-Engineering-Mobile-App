@@ -6,7 +6,7 @@ function signIn() {
  		form.reset();
  		alert("Please enter username.");
 	} else if(password == "") {
-		form.reset();
+		//form.reset();
 		alert("Please enter password.");
 	}
  	else {

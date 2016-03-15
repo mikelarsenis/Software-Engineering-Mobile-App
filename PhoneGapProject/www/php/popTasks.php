@@ -27,6 +27,6 @@
     }
     else
     {
-      echo "No current tasks...";
+      echo "Nothing to do. Go play some video games!";
     }
   ?>

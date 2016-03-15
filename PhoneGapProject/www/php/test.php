@@ -1,7 +1,5 @@
 <?php
+	$data = $_POST['dataSent'];
 
-$data = $_POST['dataSent'];
-
-echo 'alert("Oh.")';
-
+	echo 'alert('.$data.');'
 ?>
