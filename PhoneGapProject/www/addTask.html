@@ -19,6 +19,15 @@
   <div id="container">
     <label>Add Task:</label><br>
     <textarea id="taskInput"  rows="4" cols="25" ></textarea>
+    <script>
+      $(document).ready(function()
+      {
+        $.get("php/insertTask.php", function(taskText,status)
+        {
+          document.getElementById("taskInput").innerHTML = taskText;
+        })
+      });
+  </script>
   </div>
   
   <div id="addTask" onclick="addTask()">ADD TASK</div>
