@@ -14,14 +14,24 @@
   </head>
   <body>
   <input type="hidden" id="userID">
-  <div id="tasksBanner">Honey-Do List</div>
+  <div id="tasksBanner"><strong>Honey-Do List</strong></div>
+    <div id="test"> 
+  <input type="checkbox"><label> This is what a task looks like</label><br>
+  
+  <input type="checkbox" name="checkboxes" id="check2checkbox" value="This is another task">
+  <img id="check2" src="img/emptyBox.png" style="height:.7em;" onclick="checkBox(this);">
+  <label> This is another task</label>
+  <input type="hidden" id="hiddencheck2img" value="0">
+  
+  </div>
   <div id="container">
   
   <script>
 
   $(document).ready(function()
   {
-    $.get("php/popTasks.php", function(data,status)
+    //$.get("php/popTasks.php", function(data,status)
+    $.get("http://icarus.cs.weber.edu/~ml18995/SoftwareEngineering/Assignment3/php/popTasks.php", function(data,status)
     {
       document.getElementById("container").innerHTML = data;
     })
@@ -29,9 +39,13 @@
   </script>
 
   </div>
-  <div id="test"></div>
-  <div id="deleteTask" onclick="deleteCheckedBoxes('checkboxes')"><img src="img/delete.png" id="trashIcon" style="width:1em;">&#32;Delete</div>
-  <div id="newTask" onclick="newTask()"><img src="img/newTask.png" id="trashIcon" style="width:1em;">&#32;Task</div>
+
+  <div id="deleteTask">
+    <img src="img/delete.png" id="trashIcon" style="width:1.5em;height:1.5em;" onclick="deleteCheckedBoxes('checkboxes')">
+  </div>
+  <div id="newTask">
+    <img src="img/addTask.png" id="trashIcon" style="width:1.5em;height:1.5em;" onclick="newTask()">
+  </div>
   
    <script type="text/javascript" src="cordova.js"></script>
    

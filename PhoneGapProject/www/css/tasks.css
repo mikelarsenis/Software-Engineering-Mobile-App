@@ -1,51 +1,59 @@
 
-
+@font-face
+{
+	font-family: myFont;
+	src: url(../fonts/Walkway.ttf);
+}
 body 
 {
+ background:#15317E;
+ font-family:myFont;
  text-align:center;
  height:100%;
  font-size:2em;
+ color:white;
 }
 #deleteTask
 {
- background-color:red;
+ //background-color:red;
  color:black;
- width:50%;
+ width:20%;
  position:fixed;
  bottom:0;
- right:0;
+ left:50%;
  padding:5px;
 }
 #newTask
 {
- background-color:blue;
+ //background-color:blue;
  color:white;
- width:50%;
+ width:20%;
  position:fixed;
  bottom:0;
- left:0;
+ right:50%;
  padding:5px;
 }
 #container
 {
- border:solid black 2px;
  padding-top:3%;
  padding-bottom:5%;
+ color:white;
 }
 #tasksBanner
 {
- background-color:orange;
  width:100%;
-
+ font-size:2em;
+ color:white;
  padding-top:5px;
  padding-bottom:5px;
- //position: absolute;
- //left:0;
- //top:0;
+ font-size:1.5em;
+ border-bottom: solid #D8D8D8 1px;
 }
 input[type="checkbox"] 
 {
   transform:scale(1.5, 1.5);
+  border:white;
+  background-color:;
 }
 #trashIcon
 {

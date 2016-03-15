@@ -1,36 +1,46 @@
+@font-face
+{
+	font-family: myFont;
+	src: url(../fonts/Walkway.ttf);
+}
 body 
 {
+ color:white;
+ background:#15317E;
+ font-family:myFont;
  text-align:center;
  height:100%;
  font-size:2em;
 }
 #newTaskBanner
 {
- background-color:orange;
+ //background-color:orange;
  width:100%;
 
  padding-top:5px;
  padding-bottom:5px;
  display:inline-block;
+ font-size:1.5em;
+ border-bottom: solid #D8D8D8 1px;
 }
 #addTask
 {
- background-color:green;
+ //background-color:green;
  color:white;
- width:50%;
+ width:20%;
  position:fixed;
  bottom:0;
- left:0;
+ right:50%;
  padding:5px;
 }
 #cancel
 {
- background-color:red;
+ //background-color:red;
  color:white;
- width:50%;
+ width:20%;
  position:fixed;
  bottom:0;
- right:0;
+ left:50%;
  padding:5px;
 }
 #container
@@ -40,6 +50,11 @@ body
 }
 textarea
 {
+	font-family:myFont;
+	font-style:italic;
 	margin-top:1%;
 	font-size: .7em;
+	background-color:#15317E; 
+	color:white;
+	border-color:white;
 }
