@@ -8,6 +8,7 @@
 		<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, width=device-width, height=device-height" />
         <link rel="stylesheet" type="text/css" href="css/addTask.css" />
 		<script src="js/addTask.js"></script>
+    <script src="js/jquery-1.12.1.min.js"></script>
     <title>Add New Task</title>
   </head>
   <body>
@@ -15,15 +16,6 @@
   <div id="container">
     <label>Add Task:</label><br>
     <textarea id="taskInput"  rows="4" cols="25" ></textarea>
-    <script>
-      $(document).ready(function()
-      {
-        $.get("php/insertTask.php", function(taskText,status)
-        {
-          document.getElementById("taskInput").innerHTML = taskText;
-        })
-      });
-  </script>
   </div>
   
   <div id="addTask" onclick="addTask()">

@@ -10,6 +10,10 @@ function addTask()
 
 	if(confirm("Added task: " + task.substring(0,13) +"... \n\nAdd another task?")==false)
 	{
+		$.post("php/insertTask.php",
+	    {
+	    	dataSent:task
+	    }); 
 		document.getElementById("taskInput").value="";
 		window.location.assign("tasks.html");
 	}

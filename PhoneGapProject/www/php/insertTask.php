@@ -7,7 +7,7 @@
 	$dbname = "W01238826";
 
 	//last game data to insert into database
-	$task = $_POST['newtask'];
+	$task = $_POST['dataSent'];
 
 	//connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -19,7 +19,7 @@
 	}
 
 	//insertion query
-	$sql = "INSERT INTO Tasks (UserID, TaskText) VALUES ('1', $task)";
+	$sql = "INSERT INTO Tasks (UserID, TaskText) VALUES ('8'," . $task . ")";
 
 	if($conn->query($sql)===TRUE)
 	{
