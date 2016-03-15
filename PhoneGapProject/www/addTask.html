@@ -7,21 +7,21 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
 		<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, width=device-width, height=device-height" />
         <link rel="stylesheet" type="text/css" href="css/addTask.css" />
-		 <!-- <script src="js/addTask.js"></script> -->
+		<script src="js/addTask.js"></script>
     <title>Add New Task</title>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="js/addTask.js"></script>
-
   </head>
   <body>
-    <div id="newTaskBanner">Add New Task</div>
+    <div id="newTaskBanner"><strong>Add New Task</strong></div>
   <div id="container">
-    <label>Add Task:</label><br>
-    <textarea id="taskInput"  rows="4" cols="25" ></textarea>
+    <label>Task Details:</label><br>
+    <textarea class="blueBackground" id="taskInput"  rows="4" cols="25"></textarea>
   </div>
   
-  <div id="addTask" onclick="addTask()">ADD TASK</div>
-  <div id="cancel" onclick="cancel()">CANCEL</div>
+  <div id="addTask" onclick="addTask()">
+     <img src="img/addTask.png" id="plusIcon" style="width:1.5em;height:1.5em;" >
+  </div>
+  <div id="cancel" onclick="cancel()">
+     <img src="img/cancel.png" id="xIcon" style="width:1.5em;height:1.5em;" >
+  </div>
   </body>
 </html>

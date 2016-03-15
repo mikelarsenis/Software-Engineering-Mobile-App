@@ -10,17 +10,19 @@
 		<script src="js/index.js"></script>
     <title>Login</title>
   </head>
-  <body>
+  <body class="blueBackground">
   <form id="myForm" action="tasks.html" method="post">
- 	  <div id="innerContainer" class="center" >
-         <label class="center" id="userName">Username:</label><br>
-         <input class="center" id="userNameInput" name="userNameInput" type="text"><br><br>
-         <label class="center" id="password">Password:</label><br>
-         <input type="password" class="center" id="passwordInput" name="passwordInput" type="text"><br><br>
+ 	  <div id="container" class="center" >
+         <label class="center" id="userName"><strong>Username:</strong></label><br>
+         <input class="center blueBackground whiteBorder"  id="userNameInput" name="userNameInput" type="text"><br><br>
+         <label class="center" id="password"><strong>Password:</strong></label><br>
+         <input type="password" class="center blueBackground whiteBorder" id="passwordInput" name="passwordInput" type="text"><br><br>
        	 <label class="center" id="wrongLogin"><em><kbd></kbd></em></label>
 
      	 <!-- <div id="submitBtn" onclick="signIn()"><image src="img/login.png" style="width:1.5em;position:relative;top:.5em;">&#32;&#32;SUBMIT</div> -->
-       <div id="submitBtn" onclick="document.getElementById('myForm').submit()">&#32;&#32;SUBMIT</div>         	
+       <div id="submitBtn">
+          <img src="img/login.png" id="trashIcon" style="width:1.5em;height:1.5em;" onclick="document.getElementById('myForm').submit()">
+       </div>         	
  	  </div>
 
     <script type="text/javascript" src="cordova.js"></script>
