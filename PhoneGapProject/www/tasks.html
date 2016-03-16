@@ -23,11 +23,18 @@
 
   $(document).ready(function()
   {
+    $('#userID').val(sessionStorage.getItem('userid'));
+    var userIDValue = $('#userID').val();
     //$.get("php/popTasks.php", function(data,status)
-    $.get("http://icarus.cs.weber.edu/~ml18995/SoftwareEngineering/Assignment3/php/popTasks.php", function(data,status)
-    {
-      document.getElementById("container").innerHTML = data;
-    })
+    $.get("http://icarus.cs.weber.edu/~ml18995/SoftwareEngineering/Assignment3/php/popTasks.php?",
+      {
+        userid: userIDValue
+      },
+      function(data,status)
+      {
+        document.getElementById("container").innerHTML = data;
+      }
+    );
   });
   </script>
 

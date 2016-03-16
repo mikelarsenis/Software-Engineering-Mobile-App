@@ -11,9 +11,9 @@
       die("<p>Connection failed: " . $conn->connect_error . "</p>");
     }
 
-    //$sql = "SELECT TaskText FROM Tasks WHERE UserID =" + $userID;
+    $userid = $_GET["userid"];
+    $sql = "SELECT * FROM Tasks WHERE UserID = " . $userid;
     
-    $sql = "SELECT * FROM Tasks";
     $result = $conn->query($sql);
 
     if($result->num_rows > 0)
