@@ -12,7 +12,10 @@ function addTask(userid)
 		{
     		dataSent:task,
     		userid: userid
-	    }); 
+	    },function(data,status)
+	      {
+		//alert("Data: " + data + " Status: " + status);
+	      }); 
 		document.getElementById("taskInput").value="";
 
 		window.location.assign("tasks.html");

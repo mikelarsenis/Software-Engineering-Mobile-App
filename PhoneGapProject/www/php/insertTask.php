@@ -18,13 +18,15 @@
 		die("<p>Connection failed: " . $conn->connect_error . "</p>");
 	}
 
+	$escTask = $conn->real_escape_string($task);
+
 	//insertion query
-	$sql = "INSERT INTO Tasks (UserID, TaskText) VALUES ('" . $userid . "','" . $task . "')";
+	$sql = "INSERT INTO Tasks (UserID, TaskText) VALUES (" . $userid . ",'" . $escTask . "');";
 	//$sql = "INSERT INTO Tasks (UserID, TaskText) VALUES ('8','This is a test')";
 
 	if($conn->query($sql)===TRUE)
 	{
-		echo 'alert("Task inserted correctly!")';
+		echo $task;
 	}
 	else
 	{
