@@ -1,7 +1,8 @@
 <?php
 	
 	$task = $_POST['dataSent'];
-	echo "alert('PING')";
+	$userid = $_POST['userid'];
+	
 	//datebase info
 	$servername = "localhost";
 	$username = "W01238826";
@@ -18,7 +19,7 @@
 	}
 
 	//insertion query
-	$sql = "INSERT INTO Tasks (UserID, TaskText) VALUES ('8','" . $task . "')";
+	$sql = "INSERT INTO Tasks (UserID, TaskText) VALUES ('" . $userid . "','" . $task . "')";
 	//$sql = "INSERT INTO Tasks (UserID, TaskText) VALUES ('8','This is a test')";
 
 	if($conn->query($sql)===TRUE)

@@ -10,6 +10,12 @@
 		<script src="js/jquery-1.12.1.min.js"></script>
     <script src="js/addTask.js"></script>
     <title>Add New Task</title>
+    <script>
+    $(document).ready(function() {
+      $('#userID').val(sessionStorage.getItem('userid'));
+      var userIDValue = $('#userID').val();
+    });
+    </script>
   </head>
   <body>
     <input type="hidden" id="userID">
@@ -21,7 +27,7 @@
       <textarea id="taskInput"  rows="4" cols="25" ></textarea>
     </div>
     
-    <div id="addTask" onclick="addTask()">
+    <div id="addTask" onclick="addTask(sessionStorage.getItem('userid'))">
        <img src="img/addTask.png" id="plusIcon" style="width:1.5em;height:1.5em;" >
     </div>
     
