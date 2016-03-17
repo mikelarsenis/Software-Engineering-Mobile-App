@@ -20,7 +20,7 @@ function signIn() {
 	            	var d = $.parseJSON(data);
 	                if(sha256(password) == d.password) {
 	                	sessionStorage.setItem('userid', d.username);
-	                	document.location.href = "tasks.html";
+	                	window.location.assign("tasks.html");
 	                } else {
 	                	form.reset();
 	                	alert("Incorrect password.");
