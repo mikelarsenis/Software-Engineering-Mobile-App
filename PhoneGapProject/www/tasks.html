@@ -2,12 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
 		<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, width=device-width, height=device-height" />
-        <link rel="stylesheet" type="text/css" href="css/tasks.css" />
-		<!-- <script src="js/tasks.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="css/tasks.css" />
     <script src="http://icarus.cs.weber.edu/~ml18995/SoftwareEngineering/Assignment3/js/tasks.js"></script>
     <script src="js/jquery-1.12.1.min.js"></script>
     <title>Tasks</title>
@@ -25,7 +23,6 @@
   {
     $('#userID').val(sessionStorage.getItem('userid'));
     var userIDValue = $('#userID').val();
-    //$.get("php/popTasks.php", function(data,status)
     $.get("http://icarus.cs.weber.edu/~ml18995/SoftwareEngineering/Assignment3/php/popTasks.php?",
       {
         userid: userIDValue

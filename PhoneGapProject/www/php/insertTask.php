@@ -1,5 +1,4 @@
-<?php
-	
+<?php	
 	$task = $_POST['dataSent'];
 	$userid = $_POST['userid'];
 	
@@ -19,10 +18,7 @@
 	}
 
 	$escTask = $conn->real_escape_string($task);
-
-	//insertion query
 	$sql = "INSERT INTO Tasks (UserID, TaskText) VALUES (" . $userid . ",'" . $escTask . "');";
-	//$sql = "INSERT INTO Tasks (UserID, TaskText) VALUES ('8','This is a test')";
 
 	if($conn->query($sql)===TRUE)
 	{
@@ -30,7 +26,7 @@
 	}
 	else
 	{
-		echo 'alert("Error inserting task: ' . $conn->error . '")';
+		echo 'alert("Error inserting task: ' . $conn->error . '");';
 	}
 
 ?>

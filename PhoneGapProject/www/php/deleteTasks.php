@@ -1,5 +1,4 @@
 <?php
-    //get posted data
     $data = $_POST['dataSent'];
     echo 'alert("we posted!")';
 
@@ -15,15 +14,15 @@
 		die("<p>Connection failed: " . $conn->connect_error . "</p>");
 	}
 
-	//$sql = "DELETE FROM Tasks WHERE TaskText LIKE \"" . checkedBoxes[i].value . "%\";";
-    $sql = "DELETE FROM Tasks WHERE TaskText LIKE \"" . $data . "%\";";
+	$escData = $conn->real_escape_string($data);
+    $sql = "DELETE FROM Tasks WHERE TaskText LIKE " . $escData . "%;";
     
 	if($conn->query($sql)===TRUE)
 	{
-		echo 'alert("task deleted successfully")';
+		echo 'alert("task deleted successfully");';
 	}
 	else
 	{
-		echo 'alert("Error deleting record: ' . $conn->error . '")';
+		echo 'alert("Error deleting record: ' . $conn->error . '");';
 	}
 ?>
