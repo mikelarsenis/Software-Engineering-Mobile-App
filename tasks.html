@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, width=device-width, height=device-height" />
+    <link rel="stylesheet" type="text/css" href="css/tasks.css" />
+    <script src="http://icarus.cs.weber.edu/~ml18995/SoftwareEngineering/Assignment3/js/tasks.js"></script>
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <title>Tasks</title>
+    
+</head>
+<body>
+  <input type="hidden" id="userID">
+  <div id="tasksBanner"><strong>Honey-Do List</strong></div>
+    
+  <div id="container">
+  
+  <script>
+
+  $(document).ready(function()
+  {
+    $('#userID').val(sessionStorage.getItem('userid'));
+    var userIDValue = $('#userID').val();
+    $.get("http://icarus.cs.weber.edu/~ml18995/SoftwareEngineering/Assignment3/php/popTasks.php?",
+      {
+        userid: userIDValue
+      },
+      function(data,status)
+      {
+        document.getElementById("container").innerHTML = data;
+      }
+    );
+  });
+  </script>
+
+  </div>
+
+  <div id="deleteTask">
+    <img src="img/delete.png" id="trashIcon" style="width:1.5em;height:1.5em;" onclick="deleteCheckedBoxes('checkboxes')">
+  </div>
+  <div id="newTask">
+    <img src="img/addTask.png" id="trashIcon" style="width:1.5em;height:1.5em;" onclick="newTask()">
+  </div>
+  
+   <script type="text/javascript" src="cordova.js"></script>
+   
+</body>
+</html>

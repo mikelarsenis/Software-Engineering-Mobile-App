@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, width=device-width, height=device-height" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script type="text/javascript" src="js/sha256.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+    <title>Login</title>
+  </head>
+  <body class="blueBackground">
+  <form id="myForm">
+ 	  <div id="container" class="center" >
+      <label class="center" id="userName"><strong>Username:</strong></label><br>
+      <input class="center blueBackground whiteBorder" id="userNameInput" name="userNameInput" type="text"><br><br>
+      <label class="center" id="password"><strong>Password:</strong></label><br>
+      <input type="password" class="center blueBackground whiteBorder" id="passwordInput" name="passwordInput" type="text"><br><br>
+      <label class="center" id="wrongLogin"><em><kbd></kbd></em></label>
+      <div id="submitBtn">
+        <img src="img/login.png" id="trashIcon" style="width:1.5em;height:1.5em;" onclick="signIn();" />
+      </div>
+ 	  </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+  </form>
+  </body>
+</html>
