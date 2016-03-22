@@ -40,7 +40,6 @@ function deleteCheckedBoxes(chkboxName) //deletes all checked boxes
      {
         checkboxesChecked.push(checkboxes[i]);
 
-        var val = checkboxes[i].value;
         deletedTasks += checkboxes[i].value + "...\n";
      }
   }
@@ -50,7 +49,7 @@ function deleteCheckedBoxes(chkboxName) //deletes all checked boxes
   {
 	  for(var i=0; i<checkboxesChecked.length;i++)
 	  {
-	 	 removeTask(checkboxesChecked[i].value);
+	 	 removeTask(checkboxesChecked[i].id);
 	  }
   }
   else
@@ -70,26 +69,24 @@ function removeTask(val) //deletes row matching value from database
     $.post("http://icarus.cs.weber.edu/~ml18995/SoftwareEngineering/Assignment3/php/deleteTasks.php",
     {
     	dataSent: val
-    });   
+    });
 }
 
 function checkBox(img) //changes the image of the checkbox
 {
   var id = img.id;
-  var element = "task"+id+"checkbox";
-  var checked = document.getElementById(element).checked;
+  var element = img.previousSibling;
+  var checked = element.checked;
   var images = document.querySelector("input[id*='"+id+"']"); 
 
   if(checked == false)
   {
-    document.getElementById(img.id).src = "img/checkedBox.png";
-    document.getElementById(element).checked = true;
-    //document.getElementById('check2').checked = true;
+    img.src = "img/checkedBox.png";
+    element.checked = true;
   }
   else
   {
-    document.getElementById(img.id).src = "img/emptyBox.png";
-    document.getElementById(element).checked = false;
-    //document.getElementById('check2').checked = false;
+    img.src = "img/emptyBox.png";
+    element.checked = false;
   }
 }

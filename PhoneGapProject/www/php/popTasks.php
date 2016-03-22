@@ -20,8 +20,8 @@
     {
       while($row = $result->fetch_assoc())
       {
-        echo "<input type='checkbox' name='checkboxes' class='taskCheckbox' id='task".$row["TaskID"]."checkbox' style='display:none' value='".$row["TaskText"]."'>".
-        "<img id='".$row["TaskID"]."' src='img/emptyBox.png' style='height:.7em;' onclick='checkBox(this);'>".
+        echo "<input type='checkbox' name='checkboxes' class='taskCheckbox' id='".$row["TaskID"]."' style='display:none' value='".$row["TaskText"]."'>".
+        "<img id='".$row["TaskID"]."img' src='img/emptyBox.png' style='height:.7em;' onclick='checkBox(this);'>".
         "<label> ".$row["TaskText"]."</label><hr>";
       }
     }

@@ -14,8 +14,7 @@
 		die("<p>Connection failed: " . $conn->connect_error . "</p>");
 	}
 
-	$escData = $conn->real_escape_string($data);
-    $sql = "DELETE FROM Tasks WHERE TaskText LIKE " . $escData . "%;";
+    $sql = "DELETE FROM Tasks WHERE TaskID = " . $data . ";";
     
 	if($conn->query($sql)===TRUE)
 	{

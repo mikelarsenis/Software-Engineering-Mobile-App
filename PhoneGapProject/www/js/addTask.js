@@ -1,4 +1,3 @@
-
 function addTask(userid)
 {
 	var task = document.getElementById("taskInput").value;
@@ -12,10 +11,10 @@ function addTask(userid)
 		{
     		dataSent:task,
     		userid: userid
-	    }).done({function() {
+	    }).done(function() {
 			document.getElementById("taskInput").value="";
 			window.location.assign("tasks.html");
-		}});
+		});
 	}
 }
 
