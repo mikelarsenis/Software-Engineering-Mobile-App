@@ -14,7 +14,7 @@
 		die("<p>Connection failed: " . $conn->connect_error . "</p>");
 	}
 
-    $sql = "DELETE FROM Tasks WHERE TaskID = " . $data . ";";
+    	$sql = "DELETE FROM Tasks WHERE TaskID = " . $data . ";";
     
 	if($conn->query($sql)===TRUE)
 	{
