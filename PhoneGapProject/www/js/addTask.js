@@ -1,3 +1,4 @@
+
 function addTask(userid)
 {
 	var task = document.getElementById("taskInput").value;
@@ -13,7 +14,7 @@ function addTask(userid)
     		userid: userid
 	    }).done(function() {
 			document.getElementById("taskInput").value="";
-			window.location.assign("tasks.html");
+			setTimeout(window.location.assign("tasks.html"),2000);
 		});
 	}
 }

@@ -40,6 +40,7 @@ function deleteCheckedBoxes(chkboxName) //deletes all checked boxes
      {
         checkboxesChecked.push(checkboxes[i]);
 
+        var val = checkboxes[i].value;
         deletedTasks += checkboxes[i].value + "...\n";
      }
   }
@@ -54,13 +55,12 @@ function deleteCheckedBoxes(chkboxName) //deletes all checked boxes
   }
   else
   {
-  	//location.reload();
+
     window.location.assign("tasks.html");
   	return;
   }
 
-  //location.reload();
-  window.location.assign("tasks.html");
+  setTimeout(reroute,2000);
   return;
 } 
 
@@ -69,7 +69,7 @@ function removeTask(val) //deletes row matching value from database
     $.post("http://icarus.cs.weber.edu/~ml18995/SoftwareEngineering/Assignment3/php/deleteTasks.php",
     {
     	dataSent: val
-    });
+    });   
 }
 
 function checkBox(img) //changes the image of the checkbox
@@ -89,4 +89,10 @@ function checkBox(img) //changes the image of the checkbox
     img.src = "img/emptyBox.png";
     element.checked = false;
   }
+}
+
+function reroute()
+{
+  //alert("rerouting");
+  window.location.assign("tasks.html");
 }
